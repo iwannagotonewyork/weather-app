@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, View} from "react-native";
+import { StyleSheet, Text, View, StatusBar} from "react-native";
 
 export default function Loading() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Getting a Weather Information</Text>
+            <StatusBar barStyle="dark-content"></StatusBar>
+            <Text style={styles.text}>Loading...</Text>
         </View>
     )
 }
@@ -12,13 +13,12 @@ export default function Loading() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "flex-end",
-        backgroundColor: "#FDF6AA",
-        paddingVertical: 100,
-        paddingHorizontal: 30,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#fff",
     },
     text: {
-        fontSize: 30,
+        fontSize: 25,
         color: "#2c2c2c",
     },
 })
